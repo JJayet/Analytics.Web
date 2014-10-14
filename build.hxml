@@ -1,0 +1,5 @@
+-cp src
+-D nodejs
+-lib nodejs
+-main Main
+-js out/analytics.js
