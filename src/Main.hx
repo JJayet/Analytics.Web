@@ -9,8 +9,17 @@ class Main {
         res.end('<html><body><h1>Hello World</h1></body></html>');
       }
     );
+
+    var server2 = Node.http.createServer( function(
+      req:NodeHttpServerReq, res:NodeHttpServerResp){
+        res.setHeader("Content-Type","text/html");
+        res.writeHead(200);
+        res.end('<html><body><h1>Hello Yourself</h1></body></html>');
+      }
+    );
  
     server.listen(1337,"localhost");
+    server2.listen(1338,"localhost");
     trace( 'Server running at http://127.0.0.1:1337/' );
   }
 }
